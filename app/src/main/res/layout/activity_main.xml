@@ -9,13 +9,20 @@
         android:id="@+id/textViewMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textMain" />
+        android:lineSpacingExtra="8sp"
+        android:padding="25sp"
+        android:text="@string/textMain"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textViewMain2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textMain2" />
+        android:layout_marginBottom="25sp"
+        android:lineSpacingExtra="8sp"
+        android:padding="25sp"
+        android:text="@string/textMain2"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/buttonReport"

@@ -56,8 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void onPrepareBottomNav() {
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if(item.getItemId() == R.id.menu_home){
+                    item.setVisible(false);
+                }
                 switch(item.getItemId()){
                     case R.id.menu_home:
                         initHome();
@@ -72,9 +78,6 @@ public class MainActivity extends AppCompatActivity {
                         initInfo();
                         break;
                 }
-                // handle desired action here
-                // One possibility of action is to replace the contents above the nav bar
-                // return true if you want the item to be displayed as the selected item
                 return true;
             }
         });
