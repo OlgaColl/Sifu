@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:title=""
+        android:icon="@drawable/ic_home_black"/>
+
+    <item
+        android:id="@+id/menu_report"
+        android:title=""
+        android:icon="@drawable/ic_report_black"/>
+
+    <item
+        android:id="@+id/menu_request"
+        android:title=""
+        android:icon="@drawable/ic_request_black" />
+
+    <item
+        android:id="@+id/menu_info"
+        android:title=""
+        android:icon="@drawable/ic_info_black" />
+</menu>
