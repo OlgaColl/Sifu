@@ -57,16 +57,12 @@ public class MainActivity extends AppCompatActivity {
     private void onPrepareBottomNav() {
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                if(item.getItemId() == R.id.menu_home){
-                    item.setVisible(false);
-                }
                 switch(item.getItemId()){
                     case R.id.menu_home:
-                        initHome();
+                        //initHome();
                         break;
                     case R.id.menu_report:
                         initReport();
