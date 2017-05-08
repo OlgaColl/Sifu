@@ -2,8 +2,9 @@
     <string name="app_name">Sifu</string>
 
     <!-- Main Activity -->
-    <string name="textMain">Bienvenido a la APP de Grupo SIFU a través de la cual nos podrás reportar tus incidencias y hacer un seguimeitno de las mismas.</string>
-    <string name="textMain2">Toca el botón reportar incidencia y cumplimenta todos los datos para que podamos atenderte lo antes posible.</string>
+    <string name="textSifu">Sifu</string>
+    <string name="textMain">Bienvenido a la APP de Grupo SIFU a través de la cual nos podrás reportar tus incidencias y hacer un seguimeitno de las mismas. \n Toca el botón reportar incidencia y cumplimenta todos los datos para que podamos atenderte lo antes posible.</string>
+    <!--string name="textMain2"></string-->
     <string name="buttonReport">REPORTAR INCIDENCIA</string>
     <string name="buttonRequest">SOLICITUD DE INFORMACIÓN</string>
 
@@ -19,5 +20,9 @@
     <string name="textRequest">Si deseas recibir información sobre un servicio, solicitar presupuesto o conocer más sobre nuestra empresa, puedes hacernos llegar tus comentarios a través del siguiente formulario.</string>
 
     <!-- Config Activity -->
+    <string name="titleConfig">CONFIGURACIÓN</string>
     <string name="textConfig">¿Activar notificationes?</string>
+
+    <!-- Menú XML -->
+    <string name="menuInfo"></string>
 </resources>

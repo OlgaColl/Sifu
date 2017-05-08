@@ -45,7 +45,7 @@ public class RequestActivity extends AppCompatActivity{
         editTextEmail = (EditText)findViewById(R.id.input_email);
         editTextTelefono = (EditText)findViewById(R.id.input_telefono);
         editTextComentarios = (EditText)findViewById(R.id.input_comentarios);
-
+        buttonEnviar = (Button)findViewById(R.id.buttonEnviar);
     }
 
     public void onPrepareListener() {
@@ -122,10 +122,10 @@ public class RequestActivity extends AppCompatActivity{
     }
 
     public void initSend(){
-        setBundle();
+        //setBundle();
         Toast.makeText(getApplicationContext(), "OK incidencia", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtras(bundle);
+        //intent.putExtras(bundle);
         startActivity(intent);
     }
 }

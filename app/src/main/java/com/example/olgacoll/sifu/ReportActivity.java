@@ -46,7 +46,7 @@ public class ReportActivity extends AppCompatActivity{
         editTextTelefono = (EditText)findViewById(R.id.input_telefono);
         editTextCliente = (EditText)findViewById(R.id.input_cliente);
         editTextComentarios = (EditText)findViewById(R.id.input_comentarios);
-
+        buttonEnviar = (Button)findViewById(R.id.buttonEnviar);
     }
 
     public void onPrepareListener() {
