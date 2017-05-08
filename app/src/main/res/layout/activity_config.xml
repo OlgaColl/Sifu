@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:switchTextAppearance="@style/TextAppearance.AppCompat.Body2" /-->
+
         </LinearLayout>
         </ScrollView>
 </LinearLayout>

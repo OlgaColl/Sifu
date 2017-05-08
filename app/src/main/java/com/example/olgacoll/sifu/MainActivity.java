@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch(v.getId()){
-                    case R.id.toolbar:
+                    case R.id.toolbar_save:
                         initConfig();
                         break;
                 }
