@@ -108,20 +108,20 @@ public class ReportActivity extends AppCompatActivity{
 
     private void setBundle(){
         bundle = this.getIntent().getExtras();
-        bundle.remove("nombre");
-        bundle.putString("nombre", String.valueOf(editTextNombre.getText()));
-        bundle.remove("apellidos");
-        bundle.putString("apellidos", String.valueOf(editTextApellidos.getText()));
-        bundle.remove("email");
-        bundle.putString("email", String.valueOf(editTextEmail.getText()));
-        bundle.remove("telefono");
-        bundle.putString("telefono", String.valueOf(editTextTelefono.getText()));
-        bundle.remove("provincia");
-        bundle.putString("provincia", String.valueOf(provincia));
-        bundle.remove("cliente");
-        bundle.putString("cliente", String.valueOf(editTextCliente.getText()));
-        bundle.remove("comentarios");
-        bundle.putString("comentarios", String.valueOf(editTextComentarios.getText()));
+        bundle.remove("nombreReport");
+        bundle.putString("nombreReport", String.valueOf(editTextNombre.getText()));
+        bundle.remove("apellidosReport");
+        bundle.putString("apellidosReport", String.valueOf(editTextApellidos.getText()));
+        bundle.remove("emailReport");
+        bundle.putString("emailReport", String.valueOf(editTextEmail.getText()));
+        bundle.remove("telefonoReport");
+        bundle.putString("telefonoReport", String.valueOf(editTextTelefono.getText()));
+        bundle.remove("provinciaReport");
+        bundle.putString("provinciaReport", String.valueOf(provincia));
+        bundle.remove("clienteReport");
+        bundle.putString("clienteReport", String.valueOf(editTextCliente.getText()));
+        bundle.remove("comentariosReport");
+        bundle.putString("comentariosReport", String.valueOf(editTextComentarios.getText()));
     }
 
     public void initSend(){
