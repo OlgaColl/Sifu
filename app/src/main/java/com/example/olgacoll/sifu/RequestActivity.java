@@ -3,12 +3,14 @@ package com.example.olgacoll.sifu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -33,6 +35,7 @@ public class RequestActivity extends AppCompatActivity{
 
         initComponents();
         onPrepareListener();
+        setupToolbar();
         //onPrepareBottomNav();
         controlSpinner();
 
@@ -59,6 +62,25 @@ public class RequestActivity extends AppCompatActivity{
                 }
             }
         };
+    }
+
+    private void setupToolbar() {
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        // Hide the title
+        getSupportActionBar().setTitle(null);
+        // Set onClickListener to customView
+        TextView tvSave = (TextView) findViewById(R.id.toolbar_save);
+        tvSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()){
+                    case R.id.toolbar_save:
+                        initConfig();
+                        break;
+                }
+            }
+        });
     }
 
     public void controlSpinner(){
@@ -126,6 +148,11 @@ public class RequestActivity extends AppCompatActivity{
         Toast.makeText(getApplicationContext(), "OK incidencia", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         //intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    private void initConfig(){
+        Intent intent = new Intent(this, ConfigActivity.class);
         startActivity(intent);
     }
 }
