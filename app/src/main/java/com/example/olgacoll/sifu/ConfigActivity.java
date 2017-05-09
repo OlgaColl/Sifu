@@ -14,11 +14,19 @@ import android.widget.TextView;
 
 public class ConfigActivity extends AppCompatActivity{
 
+    Switch switch1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
+
+        initComponents();
         setupToolbar();
+    }
+
+    private void initComponents(){
+        switch1 = (Switch) findViewById(R.id.switch1);
     }
 
     private void setupToolbar() {
@@ -48,9 +56,6 @@ public class ConfigActivity extends AppCompatActivity{
 
 
 /*
- *  // initiate a Switch
-Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
-
 // check current state of a Switch (true or false).
 Boolean switchState = simpleSwitch.isChecked();
 
