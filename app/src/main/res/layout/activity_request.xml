@@ -15,13 +15,15 @@
         android:background="@color/colorPrimaryDark"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:orientation="horizontal"
-            android:showDividers="end">
+            android:showDividers="end"
+            android:layout_weight="0.66">
 
             <TextView
                 android:id="@+id/toolbar_save"
@@ -48,7 +50,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:baselineAligned="false">
 
             <TextView
                 android:id="@+id/textViewTitleReport"
@@ -76,7 +79,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="6dp"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="6dp"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
 
                 <EditText
                     android:id="@+id/input_nombre"
@@ -91,96 +96,121 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp">
-                <EditText android:id="@+id/input_apellidos"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
+                <EditText
+                    android:id="@+id/input_apellidos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="Apellidos" />
+                    android:hint="Apellidos"
+                    android:inputType="textPersonName" />
             </android.support.design.widget.TextInputLayout>
 
             <!--  Email Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp">
-                <EditText android:id="@+id/input_email"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
+                <EditText
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Email" />
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Teléfono Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp">
-                <EditText android:id="@+id/input_telefono"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
+                <EditText
+                    android:id="@+id/input_telefono"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="Teléfono" />
+                    android:hint="Teléfono"
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Provincia (Spinner) Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp">
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/textProvincia"/>
+                    android:text="@string/textProvincia" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Comentarios Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
                 <EditText
                     android:id="@+id/input_comentarios"
-                    android:gravity="top|left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lines="4"
-                    android:scrollHorizontally="false"
+                    android:gravity="top|left"
                     android:hint="Comentarios"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:scrollHorizontally="false" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Checkbox Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp">
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/textCheckBox" />
+                    android:text="@string/textCheckBox"
+                    android:onClick="onCheckboxClicked"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Button enviar -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp">
+
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/buttonSendRequest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/buttonReport" />
+                    android:text="@string/buttonRequest" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
     </ScrollView>

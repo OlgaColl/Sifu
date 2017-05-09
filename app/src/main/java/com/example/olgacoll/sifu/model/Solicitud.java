@@ -12,14 +12,14 @@ public class Solicitud {
     private String apellidos;
     private String email;
     private String telefono;
-    private List<String> provincia;
+    private String provincia;
     private String comentarios;
 
     public Solicitud(){
 
     }
 
-    public Solicitud(String nombre, String apellidos, String email, String telefono, List<String> provincia, String comentarios) {
+    public Solicitud(String nombre, String apellidos, String email, String telefono, String provincia, String comentarios) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
@@ -60,11 +60,11 @@ public class Solicitud {
         this.telefono = telefono;
     }
 
-    public List<String> getProvincia() {
+    public String getProvincia() {
         return provincia;
     }
 
-    public void setProvincia(List<String> provincia) {
+    public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
 

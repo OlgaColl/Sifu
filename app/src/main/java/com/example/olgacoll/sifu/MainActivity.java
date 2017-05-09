@@ -2,6 +2,7 @@ package com.example.olgacoll.sifu;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRequest(){
-        Intent intent = new Intent(this, ReportActivity.class);
+        Intent intent = new Intent(this, RequestActivity.class);
         startActivity(intent);
     }
 

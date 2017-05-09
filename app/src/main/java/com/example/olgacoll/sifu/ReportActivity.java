@@ -128,7 +128,7 @@ public class ReportActivity extends AppCompatActivity{
         Toast.makeText(getApplicationContext(), "Provincia seleccionada: " + provincia, Toast.LENGTH_SHORT).show();
     }
 
-    private void setBundle(){
+    /*private void setBundle(){
         bundle = this.getIntent().getExtras();
         bundle.remove("nombreReport");
         bundle.putString("nombreReport", String.valueOf(editTextNombre.getText()));
@@ -144,10 +144,10 @@ public class ReportActivity extends AppCompatActivity{
         bundle.putString("clienteReport", String.valueOf(editTextCliente.getText()));
         bundle.remove("comentariosReport");
         bundle.putString("comentariosReport", String.valueOf(editTextComentarios.getText()));
-    }
+    }*/
 
     public void initSend(){
-        setBundle();
+        //setBundle();
         Toast.makeText(getApplicationContext(), "OK incidencia", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtras(bundle);
