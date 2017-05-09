@@ -163,6 +163,70 @@
             </android.support.design.widget.TextInputLayout>
 
             <!-- TODO Subir imágenes, subir otra imágen -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonEscogeImagen"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonEscogeImagen" />
+
+            <Button
+                android:id="@+id/buttonEscogeImagen2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonEscogeImagen"
+                android:visibility="gone"/>
+
+                <Button
+                android:id="@+id/buttonBorrarImagen2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonBorrarImagen"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonEscogeImagen3"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonEscogeImagen"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonBorrarImagen3"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonBorrarImagen"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonEscogeImagen4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonEscogeImagen"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/buttonBorrarImagen4"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonBorrarImagen"
+                android:visibility="gone"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/buttonSubirImagen"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonSubirImagen" />
+            </android.support.design.widget.TextInputLayout>
 
             <!-- Comentarios Label -->
             <android.support.design.widget.TextInputLayout

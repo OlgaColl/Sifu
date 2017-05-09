@@ -24,7 +24,9 @@ public class ReportActivity extends AppCompatActivity{
     String dadesSpinner[];
     String provincia;
     Bundle bundle;
-    Button buttonEnviar;
+    Button buttonSubirImagen, buttonEnviar;
+    Button buttonEscogeImagen, buttonEscogeImagen2, buttonEscogeImagen3, buttonEscogeImagen4;
+    Button buttonBorrarImagen2, buttonBorrarImagen3, buttonBorrarImagen4;
     View.OnClickListener listener;
     AdapterView.OnItemSelectedListener listenerSpinner;
 
@@ -49,6 +51,14 @@ public class ReportActivity extends AppCompatActivity{
         editTextTelefono = (EditText)findViewById(R.id.input_telefono);
         editTextCliente = (EditText)findViewById(R.id.input_cliente);
         editTextComentarios = (EditText)findViewById(R.id.input_comentarios);
+        buttonSubirImagen = (Button)findViewById(R.id.buttonSubirImagen);
+        buttonEscogeImagen = (Button)findViewById(R.id.buttonEscogeImagen);
+        buttonEscogeImagen2 = (Button)findViewById(R.id.buttonEscogeImagen2);
+        buttonEscogeImagen3 = (Button)findViewById(R.id.buttonEscogeImagen3);
+        buttonEscogeImagen4 = (Button)findViewById(R.id.buttonEscogeImagen4);
+        buttonBorrarImagen2 = (Button)findViewById(R.id.buttonBorrarImagen2);
+        buttonBorrarImagen3 = (Button)findViewById(R.id.buttonBorrarImagen3);
+        buttonBorrarImagen4 = (Button)findViewById(R.id.buttonBorrarImagen4);
         buttonEnviar = (Button)findViewById(R.id.buttonEnviar);
     }
 
