@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         textViewInfo = (TextView)findViewById(R.id.textViewMain);
         buttonReport = (Button)findViewById(R.id.buttonReport);
         buttonRequest = (Button)findViewById(R.id.buttonRequest);
-        bottomNav = (BottomNavigationView)findViewById(R.id.navigation);
+        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
     }
 
     private void onPrepareListener(){
@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch(item.getItemId()){
                     case R.id.menu_home:
                         //initHome();
