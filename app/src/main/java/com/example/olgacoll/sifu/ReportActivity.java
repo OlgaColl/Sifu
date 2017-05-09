@@ -24,6 +24,7 @@ public class ReportActivity extends AppCompatActivity{
     String dadesSpinner[];
     String provincia;
     Bundle bundle;
+    int indexButton;
     Button buttonSubirImagen, buttonEnviar;
     Button buttonEscogeImagen, buttonEscogeImagen2, buttonEscogeImagen3, buttonEscogeImagen4;
     Button buttonBorrarImagen2, buttonBorrarImagen3, buttonBorrarImagen4;
@@ -41,6 +42,14 @@ public class ReportActivity extends AppCompatActivity{
         //onPrepareBottomNav();
         controlSpinner();
 
+        buttonSubirImagen.setOnClickListener(listener);
+        buttonEscogeImagen.setOnClickListener(listener);
+        buttonEscogeImagen2.setOnClickListener(listener);
+        buttonEscogeImagen3.setOnClickListener(listener);
+        buttonEscogeImagen4.setOnClickListener(listener);
+        buttonBorrarImagen2.setOnClickListener(listener);
+        buttonBorrarImagen3.setOnClickListener(listener);
+        buttonBorrarImagen4.setOnClickListener(listener);
         buttonEnviar.setOnClickListener(listener);
     }
 
@@ -60,6 +69,7 @@ public class ReportActivity extends AppCompatActivity{
         buttonBorrarImagen3 = (Button)findViewById(R.id.buttonBorrarImagen3);
         buttonBorrarImagen4 = (Button)findViewById(R.id.buttonBorrarImagen4);
         buttonEnviar = (Button)findViewById(R.id.buttonEnviar);
+        indexButton = 1; //Con este índice, controlaremos las veces que hayan dado clic en Subir Imagen.
     }
 
     public void onPrepareListener() {
@@ -69,6 +79,10 @@ public class ReportActivity extends AppCompatActivity{
                 switch (v.getId()) {
                     case R.id.buttonEnviar:
                         initSend();
+                        break;
+                    case R.id.buttonSubirImagen:
+                        if(indexButton <= 4) indexButton++; //control para que nunca pase de 4.
+                        initSubirImagen(indexButton);
                         break;
                 }
             }
@@ -162,6 +176,22 @@ public class ReportActivity extends AppCompatActivity{
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    private void initSubirImagen(int indexButton){
+        switch(indexButton){
+            case 2:
+                buttonEscogeImagen2.setVisibility(View.VISIBLE);
+                buttonBorrarImagen2.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                buttonEscogeImagen3.setVisibility(View.VISIBLE);
+                buttonBorrarImagen3.setVisibility(View.VISIBLE);
+            case 4:
+                buttonEscogeImagen4.setVisibility(View.VISIBLE);
+                buttonBorrarImagen4.setVisibility(View.VISIBLE);
+                break;
+        }
     }
 
     private void initConfig(){
