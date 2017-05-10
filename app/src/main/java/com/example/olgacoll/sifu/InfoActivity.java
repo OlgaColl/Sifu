@@ -2,8 +2,11 @@ package com.example.olgacoll.sifu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,11 +16,20 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity{
 
+    BottomNavigationView bottomNav;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        initComponents();
         setupToolbar();
+        onPrepareBottomNav();
+    }
+
+    private void initComponents(){
+        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
     }
 
     private void setupToolbar() {
@@ -37,6 +49,50 @@ public class InfoActivity extends AppCompatActivity{
                 }
             }
         });
+    }
+
+    private void onPrepareBottomNav() {
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.menu_home:
+                        initHome();
+                        break;
+                    case R.id.menu_report:
+                        initReport();
+                        break;
+                    case R.id.menu_request:
+                        initRequest();
+                        break;
+                    case R.id.menu_info:
+                        //initInfo();
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    private void initHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void initReport(){
+        Intent intent = new Intent(this, ReportActivity.class);
+        startActivity(intent);
+    }
+
+    private void initRequest(){
+        Intent intent = new Intent(this, RequestActivity.class);
+        startActivity(intent);
+    }
+
+    private void initInfo(){
+        Intent intent = new Intent(this, InfoActivity.class);
+        startActivity(intent);
     }
 
     private void initConfig(){

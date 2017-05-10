@@ -1,25 +1,26 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_home"
-        android:showAsAction="ifRoom"
-        android:title=""
+        android:title="Home"
+        app:showAsAction="ifRoom|withText"
         android:icon="@drawable/ic_home_black"/>
 
     <item
         android:id="@+id/menu_report"
-        android:showAsAction="ifRoom"
-        android:title=""
+        android:title="Report"
+        app:showAsAction="ifRoom|withText"
         android:icon="@drawable/ic_report_black"/>
 
     <item
         android:id="@+id/menu_request"
-        android:showAsAction="ifRoom"
-        android:title=""
+        android:title="Request"
+        app:showAsAction="ifRoom|withText"
         android:icon="@drawable/ic_request_black" />
 
     <item
         android:id="@+id/menu_info"
-        android:showAsAction="ifRoom"
-        android:title=""
+        android:title="Info"
+        app:showAsAction="ifRoom|withText"
         android:icon="@drawable/ic_info_black" />
 </menu>
