@@ -21,4 +21,5 @@
         <activity android:name=".ConfigActivity"/>
         <activity android:name=".InfoActivity"/>
     </application>
+
 </manifest>

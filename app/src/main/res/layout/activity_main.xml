@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackground"
-                android:drawableRight="@drawable/ic_action_config"
+                android:drawableRight="@drawable/ic_action_home"
                 android:textCursorDrawable="@color/colorWhite"
                 android:drawablePadding="8dp"
                 android:gravity="center"
@@ -49,30 +49,20 @@
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true" />
 
-        <Button
-            android:id="@+id/buttonReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/buttonReport"
-            android:layout_below="@+id/buttonRequest"
-            android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/buttonReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonReport"
+        android:layout_below="@+id/buttonRequest"
+        android:layout_alignParentStart="true" />
 
-        <Button
-            android:id="@+id/buttonRequest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/buttonRequest"
-            android:layout_below="@+id/textViewMain"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="24dp" />
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            app:itemBackground="@color/colorPrimaryDark"
-            app:itemTextColor="@drawable/selector"
-            app:itemIconTint="@color/colorWhite"
-            app:menu="@menu/bottom_navigation_main" />
+    <Button
+        android:id="@+id/buttonRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRequest"
+        android:layout_below="@+id/textViewMain"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
 </RelativeLayout>

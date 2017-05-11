@@ -3,7 +3,6 @@ package com.example.olgacoll.sifu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -20,16 +19,15 @@ import android.widget.Toast;
 import com.example.olgacoll.sifu.model.Solicitud;
 
 /**
- * Created by olgacoll on 4/5/17.
+ * Created by olgacoll on 10/5/17.
  */
 
-public class RequestActivity extends AppCompatActivity{
+public class RequestActivity extends AppCompatActivity {
 
     EditText editTextNombre, editTextApellidos, editTextEmail, editTextTelefono, editTextComentarios;
     Spinner spinner;
     String dadesSpinner[];
     String provinciaSeleccionada;
-    BottomNavigationView bottomNav;
     boolean isCheck; //controla si la checkbox ha sido marcada
     Bundle bundle;
     Button buttonSendRequest;
@@ -44,7 +42,6 @@ public class RequestActivity extends AppCompatActivity{
         initComponents();
         onPrepareListener();
         setupToolbar();
-        onPrepareBottomNav();
         controlSpinner();
 
         buttonSendRequest.setOnClickListener(listener);
@@ -58,7 +55,6 @@ public class RequestActivity extends AppCompatActivity{
         editTextComentarios = (EditText)findViewById(R.id.input_comentarios);
         buttonSendRequest = (Button)findViewById(R.id.buttonSendRequest);
         isCheck = false;
-        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
     }
 
     public void onPrepareListener() {
@@ -89,30 +85,6 @@ public class RequestActivity extends AppCompatActivity{
                         initConfig();
                         break;
                 }
-            }
-        });
-    }
-
-    private void onPrepareBottomNav() {
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.menu_home:
-                        initHome();
-                        break;
-                    case R.id.menu_report:
-                        initReport();
-                        break;
-                    case R.id.menu_request:
-                        //initRequest();
-                        break;
-                    case R.id.menu_info:
-                        initInfo();
-                        break;
-                }
-                return true;
             }
         });
     }
@@ -218,13 +190,13 @@ public class RequestActivity extends AppCompatActivity{
         Solicitud s = null;
         //si está bien validado, crearemos el objeto SOlicitud, si no, devolverá nulo
         //if(validate()){
-            String nombre = editTextNombre.getText().toString();
-            String apellidos = editTextApellidos.getText().toString();
-            String email = editTextEmail.getText().toString();
-            String telefono = editTextTelefono.getText().toString();
-            String provincia = provinciaSeleccionada;
-            String comentarios = editTextComentarios.getText().toString();
-            s = new Solicitud(nombre, apellidos, email, telefono, provincia, comentarios);
+        String nombre = editTextNombre.getText().toString();
+        String apellidos = editTextApellidos.getText().toString();
+        String email = editTextEmail.getText().toString();
+        String telefono = editTextTelefono.getText().toString();
+        String provincia = provinciaSeleccionada;
+        String comentarios = editTextComentarios.getText().toString();
+        s = new Solicitud(nombre, apellidos, email, telefono, provincia, comentarios);
         //}
         return s;
     }

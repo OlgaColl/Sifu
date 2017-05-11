@@ -3,7 +3,6 @@ package com.example.olgacoll.sifu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -12,13 +11,12 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 /**
- * Created by olgacoll on 4/5/17.
+ * Created by olgacoll on 10/5/17.
  */
 
-public class ConfigActivity extends AppCompatActivity{
+public class ConfigActivity extends AppCompatActivity {
 
     Switch switch1;
-    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +25,10 @@ public class ConfigActivity extends AppCompatActivity{
 
         initComponents();
         setupToolbar();
-        onPrepareBottomNav();
     }
 
     private void initComponents(){
         switch1 = (Switch) findViewById(R.id.switch1);
-        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
     }
 
     private void setupToolbar() {
@@ -50,30 +46,6 @@ public class ConfigActivity extends AppCompatActivity{
                         //initConfig();
                         break;
                 }
-            }
-        });
-    }
-
-    private void onPrepareBottomNav() {
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.menu_home:
-                        initHome();
-                        break;
-                    case R.id.menu_report:
-                        initReport();
-                        break;
-                    case R.id.menu_request:
-                        initRequest();
-                        break;
-                    case R.id.menu_info:
-                        initInfo();
-                        break;
-                }
-                return true;
             }
         });
     }
@@ -103,7 +75,6 @@ public class ConfigActivity extends AppCompatActivity{
         startActivity(intent);
     }
 }
-
 
 /*
 // check current state of a Switch (true or false).

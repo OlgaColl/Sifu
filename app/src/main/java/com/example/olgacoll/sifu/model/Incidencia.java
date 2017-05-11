@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import java.util.List;
 
 /**
- * Created by olgacoll on 9/5/17.
+ * Created by olgacoll on 10/5/17.
  */
 
 public class Incidencia {

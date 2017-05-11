@@ -1,17 +1,10 @@
 package com.example.olgacoll.sifu;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.DownloadManager;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewInfo;
     Button buttonReport, buttonRequest;
     View.OnClickListener listener;
-    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         onPrepareListener();
         setupToolbar();
-        onPrepareBottomNav();
         buttonReport.setOnClickListener(listener);
         buttonRequest.setOnClickListener(listener);
     }
@@ -41,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         textViewInfo = (TextView)findViewById(R.id.textViewMain);
         buttonReport = (Button)findViewById(R.id.buttonReport);
         buttonRequest = (Button)findViewById(R.id.buttonRequest);
-        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
     }
 
     private void onPrepareListener(){
@@ -75,30 +65,6 @@ public class MainActivity extends AppCompatActivity {
                         initConfig();
                         break;
                 }
-            }
-        });
-    }
-
-    private void onPrepareBottomNav() {
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.menu_home:
-                        //initHome();
-                        break;
-                    case R.id.menu_report:
-                        initReport();
-                        break;
-                    case R.id.menu_request:
-                        initRequest();
-                        break;
-                    case R.id.menu_info:
-                        initInfo();
-                        break;
-                }
-                return true;
             }
         });
     }

@@ -3,7 +3,6 @@ package com.example.olgacoll.sifu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -17,16 +16,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Created by olgacoll on 4/5/17.
+ * Created by olgacoll on 10/5/17.
  */
 
-public class ReportActivity extends AppCompatActivity{
+public class ReportActivity extends AppCompatActivity {
 
     EditText editTextNombre, editTextApellidos, editTextEmail, editTextTelefono, editTextCliente, editTextComentarios;
     Spinner spinner;
     String dadesSpinner[];
     String provincia;
-    BottomNavigationView bottomNav;
     Bundle bundle;
     int indexButton;
     Button buttonSubirImagen, buttonEnviar;
@@ -43,7 +41,6 @@ public class ReportActivity extends AppCompatActivity{
         initComponents();
         onPrepareListener();
         setupToolbar();
-        onPrepareBottomNav();
         controlSpinner();
 
         buttonSubirImagen.setOnClickListener(listener);
@@ -73,7 +70,6 @@ public class ReportActivity extends AppCompatActivity{
         buttonBorrarImagen3 = (Button)findViewById(R.id.buttonBorrarImagen3);
         buttonBorrarImagen4 = (Button)findViewById(R.id.buttonBorrarImagen4);
         buttonEnviar = (Button)findViewById(R.id.buttonEnviar);
-        bottomNav = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         indexButton = 1; //Con este índice, controlaremos las veces que hayan dado clic en Subir Imagen.
     }
 
@@ -109,30 +105,6 @@ public class ReportActivity extends AppCompatActivity{
                         initConfig();
                         break;
                 }
-            }
-        });
-    }
-
-    private void onPrepareBottomNav() {
-        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.menu_home:
-                        initHome();
-                        break;
-                    case R.id.menu_report:
-                        //initReport();
-                        break;
-                    case R.id.menu_request:
-                        initRequest();
-                        break;
-                    case R.id.menu_info:
-                        initInfo();
-                        break;
-                }
-                return true;
             }
         });
     }
@@ -248,3 +220,4 @@ public class ReportActivity extends AppCompatActivity{
         startActivity(intent);
     }
 }
+
