@@ -1,0 +1,19 @@
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_action_home"
+        barColorWhenSelected="#f38b00"/>
+        title="Home" />
+    <tab
+        id="@+id/tab_report"
+        icon="@drawable/ic_action_report"
+        title="Report" />
+    <tab
+        id="@+id/tab_request"
+        icon="@drawable/ic_action_request"
+        title="Request" />
+    <tab
+        id="@+id/tab_info"
+        icon="@drawable/ic_action_info"
+        title="Info" />
+</tabs>

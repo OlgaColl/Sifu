@@ -1,6 +1,7 @@
 package com.example.olgacoll.sifu;
 
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +30,29 @@ public class MainActivity extends AppCompatActivity {
         setupToolbar();
         buttonReport.setOnClickListener(listener);
         buttonRequest.setOnClickListener(listener);
+
+        //Prova
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                if (tabId == R.id.tab_request) {
+                    // The tab with id R.id.tab_favorites was selected,
+                    // change your content accordingly.
+                    initRequest();
+                }
+                if (tabId == R.id.tab_report) {
+                    // The tab with id R.id.tab_favorites was selected,
+                    // change your content accordingly.
+                    initReport();
+                }
+                if (tabId == R.id.tab_info) {
+                    // The tab with id R.id.tab_favorites was selected,
+                    // change your content accordingly.
+                    initInfo();
+                }
+            }
+        });
     }
 
     private void initComponents(){

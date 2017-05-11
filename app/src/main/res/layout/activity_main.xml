@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar -->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -38,31 +36,46 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textViewMain"
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/myScrollingContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="8sp"
-        android:padding="25sp"
-        android:text="@string/textMain"
-        android:textSize="20sp"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentStart="true" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonReport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonReport"
-        android:layout_below="@+id/buttonRequest"
-        android:layout_alignParentStart="true" />
+        <!-- Your loooooong scrolling content here. -->
+        <TextView
+            android:id="@+id/textViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:padding="25sp"
+            android:text="@string/textMain"
+            android:textSize="20sp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/buttonRequest"
+        <Button
+            android:id="@+id/buttonReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonReport"
+            android:layout_below="@+id/buttonRequest"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/buttonRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonRequest"
+            android:layout_below="@+id/textViewMain"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="24dp" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRequest"
-        android:layout_below="@+id/textViewMain"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp" />
-</RelativeLayout>
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_behavior="shy"/>
+</android.support.design.widget.CoordinatorLayout>
